@@ -23,10 +23,10 @@ def random_scale(alpha=0.25):
 class Fish:
     def __init__(self):
         self.body_img = f'b{random.randrange(1, 13)}.png'
-        self.eye_img = f'e{random.randrange(1, 9)}.png'
+        self.eye_img = f'e{random.randrange(1, 10)}.png'
         self.top_fin_img = f'tf{random.randrange(1, 8)}.png'
-        self.bottom_fin_img = f'bf{random.randrange(1, 7)}.png'
-        self.rear_fin_img = f'rf{random.randrange(1, 8)}.png'
+        self.bottom_fin_img = f'bf{random.randrange(1, 6)}.png'
+        self.rear_fin_img = f'rf{random.randrange(1, 10)}.png'
 
         self.body_x_size = random_scale() * 150
         self.body_y_size = random_scale() * 100
@@ -46,7 +46,7 @@ class Fish:
         self.body_pos = (random.randint(10, 30), random.randint(10, 30))
         self.eye_pos = (self.body_pos[0] + 20 + random.gauss(0, 10), self.body_pos[1] + self.body_y_size/2 + random.gauss(0, 10))
         self.top_fin_pos = (self.body_pos[0] + 40 + random.gauss(0, 10), self.body_pos[1] + random.gauss(0, 5) - 10)
-        self.bottom_fin_pos = (self.body_pos[0] + 50 + random.gauss(0, 5),
+        self.bottom_fin_pos = (self.body_pos[0] + self.body_x_size/4 + random.gauss(0, 5),
                                self.body_pos[1] + self.body_y_size - 10 + random.gauss(0, 5))
 
         self.rear_fin_pos = (self.body_pos[0] + self.body_x_size * 0.9 + random.gauss(0, 5),
@@ -122,6 +122,7 @@ def index():
                     margin-right: auto;
                     display: block;
                     width: 800px;
+                    height: 600px;
                 }
             </style>
             
