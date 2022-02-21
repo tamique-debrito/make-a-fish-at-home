@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+python-jose = "*"
+fastapi = {extras = ["all"], version = "*"}
+pymongo = "*"
+passlib = "*"
+sendgrid = "*"
+uvicorn = {extras = ["standard"], version = "*"}
+aiofiles = "*"
+motor = "*"
+gunicorn = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.7"
