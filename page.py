@@ -124,6 +124,10 @@ def index():
                     width: 800px;
                     height: 600px;
                 }
+                p {
+                    text-align: center;
+                    color: white;
+                }
             </style>
             
             
@@ -133,6 +137,7 @@ def index():
                     <canvas id='the-canvas'>
                     </canvas>
                 </div>
+                <p>Make A Fish At Home</p>
             </body>
         </html>
         
